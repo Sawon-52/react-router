@@ -24,6 +24,11 @@ const Header = () => {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link className="text-xl font-semibold hover:underline" to={`/users`}>
+                Users
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
