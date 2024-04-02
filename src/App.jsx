@@ -1,10 +1,17 @@
 import "./App.css";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="md:w-2/3 mx-auto">
+      <Header></Header>
+      <div className="w-full h-[400px] bg-red-300 rounded-md p-5">
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
+    </div>
   );
 }
 
