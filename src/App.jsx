@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="md:w-2/3 mx-auto">
       <Header></Header>
-      <div className="w-full h-[400px] bg-red-300 rounded-md p-5">
+      <div className="w-full min-h-[400px] bg-red-300 rounded-md p-5">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from "./App";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import Root from "./Routes/Root/Root";
 import ErrorPage from "./ErrorPage";
 import App from "./App";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
-import Users from "./Components/users/Users";
+import Users from "./Components/Users/Users";
 
 const router = createBrowserRouter([
   {
@@ -31,26 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "users",
+        loader: () => fetch("https://jsonplaceholder.typicode.com/users"),
         element: <Users></Users>,
       },
     ],
   },
-
-  // {
-  //   path: "/home",
-  //   element: <Home></Home>,
-  //   errorElement: <ErrorPage></ErrorPage>,
-  // },
-  // {
-  //   path: "/about",
-  //   element: <About></About>,
-  //   errorElement: <ErrorPage></ErrorPage>,
-  // },
-  // {
-  //   path: "/contact",
-  //   element: <Contact></Contact>,
-  //   errorElement: <ErrorPage></ErrorPage>,
-  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
