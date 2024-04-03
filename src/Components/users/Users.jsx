@@ -10,7 +10,7 @@ const Users = () => {
         <h2 className="text-3xl font-bold">This is Users Comeponent </h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 my-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-5">
         {users.map((user) => (
           <User user={user} key={users.id}></User>
         ))}
